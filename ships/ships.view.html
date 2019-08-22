@@ -1,0 +1,8 @@
+<h1>Ships</h1>
+
+
+<starships-list starships="$ctrl.starships" on-fetch-next-page="$ctrl.fetchNext()"></starships-list>
+
+<div class="alert alert-danger" role="alert" ng-if="$ctrl.error">
+    Hi ha hagut un error al fer la petició
+</div>

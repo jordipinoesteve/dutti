@@ -1,0 +1,6 @@
+<div class="ships">
+    <div class="row">
+        <starship ng-repeat="item in $ctrl.starships" starship="item" class="col-xs-6 col-sm-6 col-md-3"></starship>
+    </div>
+</div>
+<button ng-click="$ctrl.fetchNextPage()" class="btn btn-primary">Más datos</button>
