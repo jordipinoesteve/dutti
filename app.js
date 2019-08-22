@@ -17,7 +17,7 @@
             })
             .when('/', {
                 controller: 'ShipsController',
-                templateUrl: 'home/home.view.html',
+                templateUrl: 'ships/ships.view.html',
                 controllerAs: '$ctrl'
             })
 
