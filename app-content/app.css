@@ -22,4 +22,8 @@
     .container {
         width: 750px;
     }
+    .ship{
+        min-height: 186px;
+        max-height: 186px
+    }
 }
