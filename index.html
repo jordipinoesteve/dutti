@@ -3,14 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title>AngularJS User Registration and Login Example</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link href="app-content/app.css" rel="stylesheet" />
-</head>
-<body>
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="app-content/app.css" rel="stylesheet" />
+    <link href="sass/main.css" rel="stylesheet" />
+</head>
+<body class="position-relative">
+    <div class="background"></div>
         <div class="container">
             <!-- As a link -->
-            <div class="col-sm-12">
+            <div class="col-sm-12 parent">
                 <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
                 <div ng-view></div>
             </div>
@@ -22,7 +27,7 @@
     <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
     <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
     <script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
     <script src="app-services/authentication.service.js"></script>

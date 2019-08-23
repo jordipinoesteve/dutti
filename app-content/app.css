@@ -1,4 +1,7 @@
-﻿a {
+﻿html,body{
+    font-family: 'Lato', sans-serif;
+}
+a {
     cursor: pointer;
 }
 
@@ -27,3 +30,5 @@
         max-height: 186px
     }
 }
+
+
