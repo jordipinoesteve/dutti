@@ -6,7 +6,8 @@ a {
 }
 
 .ship .panel-body img {
-    max-width: 100%;
+    border: 1px solid white;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -24,10 +25,6 @@ a {
 @media (min-width: 992px){
     .container {
         width: 750px;
-    }
-    .ship{
-        min-height: 186px;
-        max-height: 186px
     }
 }
 

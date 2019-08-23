@@ -1,8 +1,12 @@
-<h1>Ships</h1>
+<div id="loading" class="background-loading"></div>
+<div class="background-ship"></div>
+<div class="s-wrapper mt-4 p-3">
+    <h1 class="d-block d-md-none">Ships</h1>
 
 
-<starships-list starships="$ctrl.starships" on-fetch-next-page="$ctrl.fetchNext()"></starships-list>
+    <starships-list starships="$ctrl.starships" on-fetch-next-page="$ctrl.fetchNext()"></starships-list>
 
-<div class="alert alert-danger" role="alert" ng-if="$ctrl.error">
-    Hi ha hagut un error al fer la petició
+    <div class="alert alert-danger" role="alert" ng-if="$ctrl.error">
+        Hi ha hagut un error al fer la petició
+    </div>
 </div>

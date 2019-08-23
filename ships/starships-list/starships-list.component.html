@@ -1,6 +1,27 @@
-<div class="ships">
-    <div class="row">
-        <starship ng-repeat="item in $ctrl.starships" starship="item" class="col-xs-6 col-sm-6 col-md-3"></starship>
+<span class="labelFiltros" style="float:right" ng-click="mobFilt.value = true">Filtros</span>
+<div class="row p-0 row-list mt-5" ng-init="filt = {value:''}; showList = {value:false};mobFilt = {value: false}">
+    <div class="col-12 col-md-3 pl-3 filter position-relative" ng-class="{'filter-show' : mobFilt.value}">
+        <div class="wrapper-filt position-fixed">
+            <span class="position-absolute close" ng-if="mobFilt.value" ng-click="mobFilt.value = false">X</span>
+            <h1 style="text-align: center;" ng-if="mobFilt.value">Filtros</h1>
+
+            <h1 class="mb-3">Ships</h1>
+
+            <h2 ng-click="showList.value = !showList.value"><i ng-if="!showList.value" class="fas fa-chevron-down mr-2"></i> <i ng-if="showList.value" class="fas fa-minus"></i> Starship class</h2>
+            <div class="list position-relative" ng-show="showList.value">
+                <div>
+                    <input type="radio" class="d-none" ng-model="filt.value" ng-value="''" id="radall" /><label for="radall" ng-class="{'active': filt.value == ''}">All</label>
+                </div>
+                <div ng-repeat="item in $ctrl.starships  | unique: 'starship_class' ">
+                    <input type="radio" class="d-none" ng-model="filt.value" ng-value="item.starship_class" id="rad{{$index}}" /><label for="rad{{$index}}" ng-class="{'active': filt.value == item.starship_class}">{{item.starship_class}}</label>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="ships col-12 col-md-9">
+        <div class="row">
+            <starship ng-repeat="item in $ctrl.starships | filter:{ starship_class:filt.value}" starship="item" ng-class="{'col-12': (($index + 1) % 3 == 0) , 'col-6': (($index + 1) % 3 != 0)}" id="{{$index}}" class="text-center mt-4"></starship>
+        </div>
+    </div>
+    <button id="next" style="visibility: hidden;" ng-click="$ctrl.fetchNextPage()" class="btn btn-primary">Más datos</button>
 </div>
-<button ng-click="$ctrl.fetchNextPage()" class="btn btn-primary">Más datos</button>

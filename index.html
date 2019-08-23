@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app">
+
 <head>
     <meta charset="utf-8" />
     <title>AngularJS User Registration and Login Example</title>
@@ -9,25 +10,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="app-content/app.css" rel="stylesheet" />
+    <link href="sass/animate.css" rel="stylesheet" />
     <link href="sass/main.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/07317207cd.js"></script>
 </head>
+
 <body class="position-relative">
-    <div class="background"></div>
-        <div class="container">
-            <!-- As a link -->
-            <div class="col-sm-12 parent">
-                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
-                <div ng-view></div>
-            </div>
+    <!-- As a link -->
+    <div class="logo text-center mt-4 position-relative">
+        <div class="position-fixed w-100 back-logo" >
+            <img src="img/logo.png" width="100" />
         </div>
+    </div>
+    <div class="col-sm-12 parent p-0">
+        <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+        <div ng-view></div>
+    </div>
 
 
 
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
     <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
     <script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+
 
     <script src="app.js"></script>
     <script src="app-services/authentication.service.js"></script>
@@ -41,5 +52,7 @@
     <script src="ships/ships.controller.js"></script>
     <script src="ships/starships-list/starships-list.component.js"></script>
     <script src="ships/starships-list/starship/starship.component.js"></script>
+
 </body>
+
 </html>
