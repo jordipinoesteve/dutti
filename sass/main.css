@@ -181,6 +181,8 @@ body .s-wrapper .btn-primary {
   padding: 16px 15px;
   font-size: 11px;
   line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 body .s-wrapper .btn-primary:hover {
   color: #fff;
