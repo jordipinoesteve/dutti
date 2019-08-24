@@ -9,6 +9,7 @@
 
         function ShipsController(ShipsService, $scope, $cookies) {
 
+            $(window).off('scroll', windowscroll) // Si venimos de otra vista, hay que quitar el evento
             window.scrollTo(0, 0); //Empezar siempre listado desde arriba.
 
             var windowscroll = function () {
