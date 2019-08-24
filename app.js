@@ -15,6 +15,12 @@
                 controllerAs: '$ctrl'
 
             })
+            .when('/ship/:id', {
+                controller: 'ShipController',
+                templateUrl: 'ship/ship.view.html',
+                controllerAs: '$ctrl'
+
+            })
             .when('/', {
                 controller: 'ShipsController',
                 templateUrl: 'ships/ships.view.html',

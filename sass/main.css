@@ -164,6 +164,28 @@ body .c-wrapper .credentials h3 {
 body .s-wrapper {
   color: #f2d629;
 }
+body .s-wrapper .btn-primary {
+  font-size: 14px !important;
+  display: inline;
+  width: 100%;
+  margin-bottom: 10px;
+  max-width: 480px;
+  text-align: center;
+  color: #fff;
+  background-color: #b99d6b !important;
+  border-color: #b99d6b !important;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 16px 15px;
+  font-size: 11px;
+  line-height: 1;
+}
+body .s-wrapper .btn-primary:hover {
+  color: #fff;
+  background-color: #ceba97;
+  border-color: #ceba97;
+}
 body .s-wrapper .labelFiltros {
   display: none;
 }
@@ -179,6 +201,10 @@ body .s-wrapper h3 {
 }
 body .s-wrapper h4 {
   font-size: 11px;
+  font-weight: bold;
+}
+body .s-wrapper h5 {
+  font-size: 12px;
   font-weight: bold;
 }
 body .s-wrapper .row-list .ng-show {

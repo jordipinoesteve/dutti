@@ -1,9 +1,11 @@
-<div class="panel panel-default ship">
-    <div class="panel-body">
-        <img ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.shipId}}.jpg" no-image="img/NoImageFound.png">
+<a href="/#!/ship/{{$ctrl.shipId}}">
+    <div class="panel panel-default ship">
+        <div class="panel-body">
+            <img ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.shipId}}.jpg" no-image="img/NoImageFound.png">
+        </div>
+         <div class="panel-heading mt-3">
+            <h3 class="panel-title">{{$ctrl.starship.name}}</h3>
+            <h4 class="panel-title">{{$ctrl.starship.cost_in_credits}} cr.</h4>
+        </div>
     </div>
-     <div class="panel-heading mt-3">
-        <h3 class="panel-title">{{$ctrl.starship.name}}</h3>
-        <h4 class="panel-title">{{$ctrl.starship.cost_in_credits}} cr.</h4>
-    </div>
-</div>
+</a>

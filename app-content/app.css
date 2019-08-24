@@ -3,8 +3,13 @@
 }
 a {
     cursor: pointer;
-}
+    color:#f2d629;
 
+}
+a:hover{
+    text-decoration: none;
+    color:#f2d629;
+}
 .ship .panel-body img {
     border: 1px solid white;
     width: 100%;
