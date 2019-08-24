@@ -4,10 +4,12 @@
     <div class="row mt-4">
         <div class="col-12 col-md-6 mb-3"><img ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.id}}.jpg" no-image="img/NoImageFound.png" width="100%"></div>
         <div class="col-12 col-md-6">
-            <h3 class="text-center mb-4">{{$ctrl.starship.name}}</h3>
+            <h3 class="text-center mb-3 font-weight-normal">{{$ctrl.starship.name}}</h3>
             <h4 class="text-center mb-4">{{$ctrl.starship.cost_in_credits}} cr</h4>
-            <h5 class="text-center mb-3">{{$ctrl.starship.model}}</h5>
-            <h5 class="text-center">{{$ctrl.starship.manufacturer}}</h5>
+            <h3 class="text-center mb-3 text-capitalize">Details</h3>
+            <h5 class="text-left font-weight-normal">Model: {{$ctrl.starship.model}}</h5>
+            <h5 class="text-left font-weight-normal">Manufacturer: {{$ctrl.starship.manufacturer}}</h5>
+            <h5 class="text-left font-weight-normal">Class: {{$ctrl.starship.starship_class}}</h5>
             <a href="/#!/ships" class="btn btn-primary d-block mt-3">Back to list</a>
         </div>
     </div>
