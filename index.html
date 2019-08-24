@@ -19,13 +19,15 @@
 <body class="position-relative">
     <!-- As a link -->
     <div class="logo text-center mt-4 position-relative">
-        <div class="position-fixed w-100 back-logo" >
+        <div class="position-fixed w-100 back-logo">
             <img src="img/logo.png" width="100" />
         </div>
     </div>
     <div class="col-sm-12 parent p-0">
-        <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
         <div ng-view></div>
+        <div class="container">
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message" class="alrt"></div>
+        </div>
     </div>
 
 

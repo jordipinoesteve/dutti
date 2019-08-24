@@ -100,7 +100,8 @@ body .c-wrapper .credentials form .form-control {
 body .c-wrapper .credentials form .form-control:focus, body .c-wrapper .credentials form .form-control:active {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #000;
+  border-color: #ffc107;
+  border-bottom: 2px solid;
 }
 body .c-wrapper .credentials form .btn-primary {
   font-size: 14px !important;
@@ -266,10 +267,6 @@ body .s-wrapper .row-list label.active {
     color: #f2d629;
   }
 
-  .background {
-    display: none;
-  }
-
   .labelFiltros {
     display: block !important;
   }
@@ -353,6 +350,13 @@ div::-webkit-scrollbar-thumb {
 
 div::-webkit-scrollbar-thumb:hover {
   background: #f2d655;
+}
+
+.alrt {
+  margin-top: 100px;
+  background-color: #721c2461;
+  color: #d3ba23;
+  border-color: #721c24;
 }
 
 /*# sourceMappingURL=main.css.map */
