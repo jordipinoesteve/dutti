@@ -1,12 +1,12 @@
 <div id="loading2" class="background-loading"></div>
 <div class="background-ship"></div>
 <div class="container s-wrapper mt-4 pt-5">
-    <div class="row mt-4">
+    <div class="row mt-4 shp">
         <div class="col-12 col-md-6 mb-3"><img ng-src="https://starwars-visualguide.com/assets/img/starships/{{$ctrl.id}}.jpg" no-image="img/NoImageFound.png" width="100%"></div>
         <div class="col-12 col-md-6">
             <h3 class="text-center mb-3 font-weight-normal">{{$ctrl.starship.name}}</h3>
             <h4 class="text-center mb-4">{{$ctrl.starship.cost_in_credits}} cr</h4>
-            <h3 class="text-center mb-3 text-capitalize">Details</h3>
+            <h3 class="text-center mb-3 text-capitalize p-3 border-bottom details">Details</h3>
             <h5 class="text-left font-weight-normal">Model: {{$ctrl.starship.model}}</h5>
             <h5 class="text-left font-weight-normal">Manufacturer: {{$ctrl.starship.manufacturer}}</h5>
             <h5 class="text-left font-weight-normal">Class: {{$ctrl.starship.starship_class}}</h5>
