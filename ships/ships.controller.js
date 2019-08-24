@@ -17,7 +17,7 @@
                 }
                 if ($(window).scrollTop() >= ($(document).height()) - $(window).height()) {
                     $(window).off('scroll', windowscroll)
-                    $("#next").click();
+                    $("#next").click(); //Parte de correcciones, se pone en vez de _this.fetchNext()
 
                     if($("#next").html() == undefined){
                         $(window).on('scroll', windowscroll) //caso en que el botón no esté disponible
@@ -32,20 +32,16 @@
             var page = 1;
 
             _this.fetchNext = function () {
-                console.log(1)
                 if (cancel) {
                     return
                 }; //Cancelar llamada en caso de que no hayan más naves para mostrar.
 
-                console.log(2)
                 var url = _this.lastResponse ? _this.lastResponse.next : null;
 
                 if ($cookies.get("localAPI" + page)) {
-                    console.log(3)
                     _this.fillData(JSON.parse(localStorage.getItem("page" + page)));
 
                 } else {
-                    console.log(4)
                     $("#loading").attr("style", "display:block");
                     ShipsService.GetStarships(url)
                         .then(function (data) {
@@ -87,7 +83,6 @@
                     page = page + 1;
                 }
 
-                console.log(data.next, cancel)
                 if (data.next == null) {
                     cancel = true; //cancelar más llamadas a API.
 
@@ -99,7 +94,6 @@
                 window.scrollTo(0, $(document).height() - $(window).height() - 10)
 
                 $(window).on('scroll', windowscroll)
-                console.log('on')
 
         }
 

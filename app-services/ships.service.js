@@ -28,11 +28,12 @@
         }
 
         function ReadStarShip(id) {
-            var url  = 'https://swapi.co/api/starships/' + id
+            var url  = 'https://swapi.co/api/starships/' + id + '/'
             return $http.get(url,{
                 headers: {
                     'Authorization': 'none'
-                }
+                },
+                credentials: 'same-origin'
             }).then(function(res){
                 return res.data;
             });
