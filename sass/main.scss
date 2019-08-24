@@ -398,8 +398,11 @@ div::-webkit-scrollbar-thumb:hover {
 
 .alrt{
     margin-top: 100px;
-    background-color: #721c2461;
-    color: #d3ba23;
-    border-color: #721c24;
+    &.alert-danger{
+        background-color: #721c2461;
+        color: #d3ba23;
+        border-color: #721c24;
+    }
+
 }
 
