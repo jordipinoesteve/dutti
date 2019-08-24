@@ -85,6 +85,7 @@
 
                 if (data.next == null) {
                     cancel = true; //cancelar más llamadas a API.
+                    $(window).off('scroll', windowscroll)
 
                 }
 
