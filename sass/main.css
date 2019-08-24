@@ -214,6 +214,7 @@ body .s-wrapper .row-list label:hover {
 }
 body .s-wrapper .row-list label.active {
   font-weight: bold;
+  color: #94883c;
 }
 
 @media (max-width: 1000px) {

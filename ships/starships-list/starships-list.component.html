@@ -7,13 +7,13 @@
 
             <h1 class="mb-3">Ships</h1>
 
-            <h2 ng-click="showList.value = !showList.value"><i ng-if="!showList.value" class="fas fa-chevron-down mr-2"></i> <i ng-if="showList.value" class="fas fa-minus"></i> Starship class</h2>
+            <h2 ng-click="showList.value = !showList.value"><i ng-if="!showList.value" class="fas fa-chevron-down mr-2"></i> <i ng-if="showList.value" class="fas fa-minus mr-2"></i> Starship class</h2>
             <div class="list position-relative" ng-show="showList.value">
                 <div>
                     <input type="radio" class="d-none" ng-model="filt.value" ng-value="''" id="radall" /><label for="radall" ng-class="{'active': filt.value == ''}">All</label>
                 </div>
                 <div ng-repeat="item in $ctrl.starships  | unique: 'starship_class' ">
-                    <input type="radio" class="d-none" ng-model="filt.value" ng-value="item.starship_class" id="rad{{$index}}" /><label for="rad{{$index}}" ng-class="{'active': filt.value == item.starship_class}">{{item.starship_class}}</label>
+                    <input type="radio" class="d-none" ng-model="filt.value" ng-value="item.starship_class" id="rad{{$index}}" /><label for="rad{{$index}}" ng-class="{'active': filt.value == item.starship_class}" >{{item.starship_class}}</label>
                 </div>
             </div>
         </div>
